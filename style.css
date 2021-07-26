@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+body{
+    background-color: rgb(34, 34, 34);
+}
+nav{
+    width: 100%;
+    height: 40px;
+    background-color: rgb(34, 34, 34);
+    margin: 0 auto;
+    text-align: center;
+    font-size: 15px;
+    line-height: 40px;
+}
+.left{
+    display: inline-block;
+    min-width: 30%;
+    float: left;
+    font-size: 20px;
+    font-weight:bold;
+    
+    /* border:1px white solid; */
+}
+.left a{
+    width: auto;
+    padding:0 10px;
+}
+
+.clearFix{
+    clear: both;
+}
+nav a{
+    text-decoration: none;
+    /* color:rgb(239, 147, 11); */
+    color:rgb(253, 189, 87);
+    display:inline-block;
+    width: calc(33.33% - 10px);
+    transition:.3s;
+}
+.right{
+    display: inline-block;
+    min-width: 25%;
+    float:right;
+    height:40px;
+    /* color: #fff; */
+}
+.right a{
+    color:#fff;
+}
+nav a:hover{
+    transition:.3s;
+    /* background-color: rgba(255,255,255,.3); */
+    height:40px;
+    font-size: 22px;
+    
+}
+.bar{
+    color: #fff;
+}
+.right a:hover{
+    line-height: 22px;
+}
+.cover{
+    width: 100%;
+    height: 300px;
+    background-color: rgba(255,255,255,.5);
+    text-shadow: grey 0.1em 0.1em 0.2em;
+    font-weight: bolder;
+    float: left;
+    position:absolute;
+    animation-name:changeOpacity;   
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count:infinite;
+    animation-direction: alternate;
+}
+@keyframes changeOpacity{
+    0%{
+        background-color:rgba(0,0,0,.8);
+        color:white;
+    }
+    
+    100%{
+        /* background-color:rgba(255,255,255,.8); */
+        background-color:rgba(0,0,0,.2);
+    }
+}
+.cover1{
+    width: 100%;
+    height: 300px;
+    /* background-color: rgba(255,255,255,.5); */
+    color: aliceblue;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    float: left;
+    position:absolute;   
+    animation-name:changeOpacity;   
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count:infinite;
+    animation-direction: alternate;
+}
+.cover img{
+    top:340px;
+    
+}
+header{
+    /* display:flex; */
+    width: 100%;
+    overflow: hidden;
+}
+header img{
+    /* max-width: 100%; */
+    /* max-height: 300px; */
+    
+    
+}
+header h1{
+    position: absolute;
+    text-align: center;
+    /* width: 100%; */
+    top:80px;
+    left:calc((100% - 200px)/2);
+    
+}
+header .introduce{
+    position: absolute; 
+    top:120px;
+    left:calc((100% - 300px)/2); 
+    width: 300px;
+    margin: 0 auto;
+   
+}
+.container{
+    
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+}
+.aboutMe h2{
+    color:rgb(239, 147, 11);
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.aboutMe p{
+    color:#ccc;
+    /* text-align: center; */
+    /* display: inline-block; */
+    width: 60%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+.col{
+    /* outline:1px solid #aaa; */
+    width:calc(33.33% - 60px); 
+    height: auto;
+    margin: 0 30px;
+    float: left;
+    margin-bottom: 30px;
+}
+.col img{
+    /* min-width: 100%; */
+    max-width: 100%;
+    height: 200px;
+    display:block;
+    margin: 0 auto;
+    
+}
+.col .title{
+    color:rgb(239, 147, 11);
+    font-size: 20px;
+    text-align: center;
+}
+.col .content{
+    color:#aaa;
+    text-indent: 35px;
+}
+.photoWall .col{
+    /* border:5px solid white; */
+    border-right:2px solid #fff;
+    border-bottom:2px solid #fff;
+    margin:0;
+    padding:20px;
+}
+.photoWall .col:nth-child(3n){
+    border-right:none;
+    
+}
+.photoWall .col:nth-last-child(-n+4){
+    border-bottom:none;   
+}
+footer{
+    width: 100%;
+    height: 50px;
+}
+
+@media screen and (max-width: 850px) {
+    .col{
+        /* outline:1px solid #aaa; */
+        width:100%; 
+        height: auto;
+        margin: 0 10px;
+        float: left;
+        margin-bottom: 30px;
+    }
+    .col .content{
+        margin: 0 auto;
+        width: 60%;
+    }
+    .right{
+        width: 40%;
+    }
+    .right a:hover{
+        font-size: 18px;
+    }
+    .photoWall .col {
+        border: none;
+    }
+}
